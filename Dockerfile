@@ -48,3 +48,4 @@ RUN python setup.py install
 WORKDIR /root/extracted/
 
 ENTRYPOINT ["binwalk", "-e"]
+
