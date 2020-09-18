@@ -35,7 +35,9 @@ RUN python setup.py install
 # Install unstuff (closed source) to extract StuffIt archive files
 RUN mkdir /opt/stuffit
 WORKDIR /opt/stuffit
-RUN wget -O - http://my.smithmicro.com/downloads/files/stuffit520.611linux-i386.tar.gz | tar -zxv
+# Old location but keeping for now just in case
+# RUN wget -O - http://my.smithmicro.com/downloads/files/stuffit520.611linux-i386.tar.gz | tar -zxv
+RUN wget -O - http://downloads.tuxfamily.org/sdtraces/stuffit520.611linux-i386.tar.gz | tar -zxv
 RUN cp bin/unstuff /usr/local/bin/
 
 # Install additional python dependencies
